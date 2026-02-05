@@ -1,7 +1,51 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://flyyyy-fly.github.io/'
 languageCode = 'zh-cn'
-title = '我的博客'
+title = '我' # 你的网站名字
 theme = "PaperMod"
 
 [params]
-    defaultTheme = "auto"
+    env = "production"
+    # 自动切换深色/浅色模式
+    defaultTheme = "auto" 
+    # 是否在文章页显示字数和阅读时间
+    ShowReadingTime = true
+    # 是否在首页显示文章摘要
+    ShowFullTextContent = false 
+    # 是否显示代码复制按钮
+    showCodeCopyButtons = true
+
+    # --- 1. 首页中间的个人介绍 ---
+    [params.homeInfoParams]
+        Title = "你好，欢迎来到我的频道 👋"
+        Content = "在这里分享我的学习笔记、折腾记录和生活随笔。"
+
+    # --- 2. 首页底部的社交图标 ---
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/flyyyy-fly"
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:yourname@example.com"
+
+# --- 3. 顶部导航栏配置 ---
+[menu]
+    [[menu.main]]
+        identifier = "posts"
+        name = "文章"
+        url = "/posts/"
+        weight = 10
+    [[menu.main]]
+        identifier = "archives"
+        name = "归档"
+        url = "/archives/"
+        weight = 20
+    [[menu.main]]
+        identifier = "tags"
+        name = "标签"
+        url = "/tags/"
+        weight = 30
+    [[menu.main]]
+        identifier = "search"
+        name = "搜索" # 开启搜索功能需要额外配置，暂时可以留着
+        url = "/search/"
+        weight = 40
