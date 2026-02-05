@@ -1,6 +1,6 @@
 baseURL = 'https://flyyyy-fly.github.io/'
 languageCode = 'zh-cn'
-title = '我' # 你的网站名字
+title = '我' 
 theme = "PaperMod"
 
 [params]
@@ -16,8 +16,8 @@ theme = "PaperMod"
 
     # --- 1. 首页中间的个人介绍 ---
     [params.homeInfoParams]
-        Title = "你好，欢迎来到我的频道 👋"
-        Content = "在这里分享我的学习笔记、折腾记录和生活随笔。"
+        Title = "你好，欢迎来到我的频道 "
+        Content = "在这里记录我的学习。"
 
     # --- 2. 首页底部的社交图标 ---
     [[params.socialIcons]]
@@ -25,7 +25,7 @@ theme = "PaperMod"
         url = "https://github.com/flyyyy-fly"
     [[params.socialIcons]]
         name = "email"
-        url = "mailto:yourname@example.com"
+        url = "18091655636@163.com"
 
 # --- 3. 顶部导航栏配置 ---
 [menu]
