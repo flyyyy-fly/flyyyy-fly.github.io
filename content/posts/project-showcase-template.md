@@ -1,6 +1,8 @@
+
 ---
-title: "项目名称：基于 Hugo 的个人品牌建设"
-date: 2023-10-27
+title: "样式排版教程"
+date: 2026-02-05
+draft: false
 tags: ["项目", "秋招", "前端"]
 showToc: true
 ---
