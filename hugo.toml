@@ -2,25 +2,24 @@ baseURL = 'https://flyyyy-fly.github.io/'
 languageCode = 'zh-cn'
 title = '我' 
 theme = "PaperMod"
-author = "flyyyy-fly"
+
+# 1. 设置顶层作者
+[author]
+    name = "flyyyy-fly"
 
 [params]
     env = "production"
-    # 自动切换深色/浅色模式
+    author = "flyyyy-fly" 
+    
     defaultTheme = "auto" 
-    # 是否在文章页显示字数和阅读时间
     ShowReadingTime = true
-    # 是否在首页显示文章摘要
     ShowFullTextContent = false 
-    # 是否显示代码复制按钮
     showCodeCopyButtons = true
 
-    # --- 1. 首页中间的个人介绍 ---
     [params.homeInfoParams]
         Title = "你好，欢迎来到我的频道 "
         Content = "在这里记录我的学习。"
 
-    # --- 2. 首页底部的社交图标 ---
     [[params.socialIcons]]
         name = "github"
         url = "https://github.com/flyyyy-fly"
@@ -28,7 +27,6 @@ author = "flyyyy-fly"
         name = "email"
         url = "mailto:18091655636@163.com"
 
-# --- 3. 顶部导航栏配置 ---
 [menu]
     [[menu.main]]
         identifier = "posts"
@@ -51,15 +49,17 @@ author = "flyyyy-fly"
         url = "/search/"
         weight = 40
 
-# --- 核心修复配置区 ---
+# 2. 核心补丁：告诉 Hugo 渲染文章时忽略那个出错的 RSS 文件
+[outputs]
+    home = ["HTML"]    # 去掉 "RSS"，这样就不生成 rss.xml，彻底避开报错
+    page = ["HTML"]
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true  # 允许使用折叠框等 HTML 标签
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
-    lineNos = false  # 禁用行号以防解析代码块时出错
+    lineNos = false
 
 [minify]
-  disableHTML = true # 重要：禁用 HTML 压缩，防止它把你代码里的 {} 误认为是错误
-  disableXML = true  # 重要：防止 RSS 订阅文件因 Author 字段解析逻辑出错
+  disableHTML = true
+  disableXML = true
