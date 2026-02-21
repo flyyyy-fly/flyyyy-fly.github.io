@@ -1,7 +1,8 @@
-baseURL = 'https://flyyyy-fly.github.io/'
+aseURL = 'https://flyyyy-fly.github.io/'
 languageCode = 'zh-cn'
 title = '我' 
 theme = "PaperMod"
+author = "flyyyy-fly"
 
 [params]
     env = "production"
@@ -49,3 +50,8 @@ theme = "PaperMod"
         name = "搜索" # 开启搜索功能需要额外配置，暂时可以留着
         url = "/search/"
         weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
