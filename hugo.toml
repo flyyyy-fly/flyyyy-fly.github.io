@@ -1,4 +1,4 @@
-aseURL = 'https://flyyyy-fly.github.io/'
+baseURL = 'https://flyyyy-fly.github.io/'
 languageCode = 'zh-cn'
 title = '我' 
 theme = "PaperMod"
@@ -26,7 +26,7 @@ author = "flyyyy-fly"
         url = "https://github.com/flyyyy-fly"
     [[params.socialIcons]]
         name = "email"
-        url = "18091655636@163.com"
+        url = "mailto:18091655636@163.com"
 
 # --- 3. 顶部导航栏配置 ---
 [menu]
@@ -47,11 +47,19 @@ author = "flyyyy-fly"
         weight = 30
     [[menu.main]]
         identifier = "search"
-        name = "搜索" # 开启搜索功能需要额外配置，暂时可以留着
+        name = "搜索"
         url = "/search/"
         weight = 40
+
+# --- 核心修复配置区 ---
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true
+      unsafe = true  # 允许使用折叠框等 HTML 标签
+  [markup.highlight]
+    lineNos = false  # 禁用行号以防解析代码块时出错
+
+[minify]
+  disableHTML = true # 重要：禁用 HTML 压缩，防止它把你代码里的 {} 误认为是错误
+  disableXML = true  # 重要：防止 RSS 订阅文件因 Author 字段解析逻辑出错
