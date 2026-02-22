@@ -1,5 +1,5 @@
 ---
-title: "赛诺菲 (Sanofi) 小红书糖尿病人群洞察研究"
+title: "实训项目：赛诺菲小红书糖尿病人群洞察研究"
 date: 2026-02-13
 tags: ["数据分析", "AI打标", "人群画像分析", "医疗行业"]
 categories: ["实习项目"]
@@ -9,7 +9,7 @@ draft: false
 ## 项目背景
 本次项目甲方为 **赛诺菲 (Sanofi)**，核心任务是为其出具《小红书糖尿病人群洞察研究报告》。数据源涵盖聚光、灵犀平台及小红书 M300 笔记评论，2025 年圈包人数达 **12,748,995**。
 
-本人核心负责 **AI 辅助打标、用户圈群画像分析、各阶段热点趋势洞察**，由于商业原因代码不开源，但在博文中展示核心逻辑。
+本人核心负责 **AI 辅助打标、用户圈群画像分析、各阶段热点趋势洞察**，由于商业原因PPT不开源，但在博文中展示核心逻辑。
 
 ---
 
@@ -33,8 +33,8 @@ draft: false
     </div>
     <div style="font-size: 1.5em; color: #ccc;">➔</div>
     <div style="flex: 1; min-width: 120px;">
-      <div style="font-weight: bold; color: #005a8b;">竞品专项调研</div>
-      <p style="color: #666;">诺和锐表现分析</p>
+      <div style="font-weight: bold; color: #005a8b;">阶段行为分析</div>
+      <p style="color: #666;">热点趋势洞察</p>
     </div>
   </div>
 </div>
